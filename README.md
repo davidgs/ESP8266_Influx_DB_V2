@@ -5,29 +5,29 @@ Library for NodeMcu / ESP8266 (and Arduino?) for sending measurements to an Infl
 ## Initialization
 ```cpp
  #define INFLUXDB_HOST "192.168.0.32"
- #define INFLUXDB_PORT "1337"
- #define INFLUXDB_DATABASE "test"
- //if used with authentication
- #define INFLUXDB_USER "user"
- #define INFLUXDB_PASS "password"
+ #define INFLUXDB_PORT "9999"
+ #define INFLUXDB_ORG "test"
+ #define INFLUXDB_BUCKET "telegraf"
+ #define INFLUXDB_TOKEN "longTokenStringFromInfluxDBv2"
+
 
  // connect to WiFi
 
- Influxdb influx(INFLUXDB_HOST); // port defaults to 8086
+ Influxdb influx(INFLUXDB_HOST); // port defaults to 9999
  // or to use a custom port
  Influxdb influx(INFLUXDB_HOST, INFLUXDB_PORT);
 
  // set the target database
- influx.setDb(INFLUXDB_DATABASE);
- // or use a db with auth
- influx.setDbAuth(INFLUXDB_DATABASE, INFLUXDB_USER, INFLUXDB_PASS) // with authentication
+ influx.setOrg(INFLUXDB_ORG);
+ influx.setBucket(INFLUXDB_BUCKET);
+ influx.setToken(INFLUXDB_TOKEN);
 ```
 
 ## Sending a single measurement
 **Using an InfluxData object:**
 ```cpp
 // create a measurement object
-InfluxData measurement ("temperature");
+InfluxDataV2 measurement ("temperature");
 measurement.addTag("device", d2);
 measurement.addTag("sensor", "dht11");
 measurement.addValue("value", 24.0);
@@ -45,13 +45,13 @@ influx.write(measurement);
 Batching measurements and send them with a single request will result in a much higher performance.
 ```cpp
 
-InfluxData measurement1 = readTemperature()
+InfluxDataV2 measurement1 = readTemperature()
 influx.prepare(measurement1)
 
-InfluxData measurement2 = readLight()
+InfluxDataV2 measurement2 = readLight()
 influx.prepare(measurement2)
 
-InfluxData measurement3 = readVoltage()
+InfluxDataV2 measurement3 = readVoltage()
 influx.prepare(measurement3)
 
 // writes all prepared measurements with a single request into db.
