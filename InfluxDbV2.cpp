@@ -3,8 +3,8 @@
 
     Purpose: Helps with sending measurements to an Influx database.
 
-    @author David G. Simmons
-    
+    @author David G. Simmons Forked from:
+    @author Tobias Schürg
 */
 #include "InfluxDbV2.h"
 #include "Arduino.h"

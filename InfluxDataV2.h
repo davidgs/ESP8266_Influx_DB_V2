@@ -6,7 +6,8 @@
     @see
    https://docs.influxdata.com/influxdb/v1.5/concepts/glossary/#measurement
 
-    @author David G. Simmons
+    @author David G. Simmons Forked from:
+    @author Tobias Schürg
 */
 
 class InfluxDataV2 {

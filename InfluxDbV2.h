@@ -4,7 +4,8 @@
 
     Purpose: Helps with sending measurements to an Influx V2 database.
 
-    @author David G. Simmons
+    @author David G. Simmons Forked from:
+    @author Tobias Schürg
 */
 #if defined(ESP8266)
 #include <ESP8266HTTPClient.h>
