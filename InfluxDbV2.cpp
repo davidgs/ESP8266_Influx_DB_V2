@@ -3,7 +3,8 @@
 
     Purpose: Helps with sending measurements to an Influx database.
 
-    @author Tobias Schürg
+    @author David G. Simmons
+    
 */
 #include "InfluxDbV2.h"
 #include "Arduino.h"
@@ -20,6 +21,7 @@ InfluxdbV2::InfluxdbV2(String host, uint16_t port) {
 
 /**
  * Set the Bucket to be used.
+ * @param bucket the InfluxDB Bucket which must already exist
  */
 void InfluxdbV2::setBucket(String bucket) {
   _bucket = String(bucket);
@@ -27,7 +29,8 @@ void InfluxdbV2::setBucket(String bucket) {
 }
 
 /**
- * Sets the Organization
+ * Set the Organization to be used
+ * @param org the Name of the organization unit to use which must already exist
  */
 void InfluxdbV2::setOrg(String org){
   _org = String(org);
@@ -36,6 +39,7 @@ void InfluxdbV2::setOrg(String org){
 
 /**
  * Set the authorization token
+ * @param token the Auth Token from InfluxDBv2 *required*
  */
 void InfluxdbV2::setToken(String token){
   _token = String(token);
@@ -79,6 +83,10 @@ boolean InfluxdbV2::write(InfluxDataV2 data) { return write(data.toString()); }
  * for a list of error codes.
  */
 boolean InfluxdbV2::write(String data) {
+  if(_token == null || _token.length() < 10){
+    Serial.println("#####\nInvalid Access Token\n#####");
+    return false;
+  }
   Serial.print(" --> writing to host: " + _host + " Port: " + _port + " URL: /api/v2/write?org=" + _org + "&bucket=" + _bucket + ":\n");
   Serial.println(data);
 

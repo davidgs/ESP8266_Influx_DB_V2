@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['prepare',['prepare',['../class_influxdb.html#ac413538b4f9d5ca6bc2b70cfe67643b7',1,'Influxdb']]]
+  ['prepare',['prepare',['../class_influxdb_v2.html#a8fec13c6ac66166ada65971472dcab3b',1,'InfluxdbV2']]]
 ];

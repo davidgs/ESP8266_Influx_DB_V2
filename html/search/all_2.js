@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['influxdata',['InfluxData',['../class_influx_data.html',1,'InfluxData'],['../class_influx_data.html#a5b2ad5b02681f8e94fa5c1961ae329ee',1,'InfluxData::InfluxData()']]],
-  ['influxdata_2eh',['InfluxData.h',['../_influx_data_8h.html',1,'']]],
-  ['influxdb',['Influxdb',['../class_influxdb.html',1,'Influxdb'],['../class_influxdb.html#ab1a58669240f294c240297e91067095c',1,'Influxdb::Influxdb()']]],
-  ['influxdb_2ecpp',['InfluxDb.cpp',['../_influx_db_8cpp.html',1,'']]],
-  ['influxdb_2eh',['InfluxDb.h',['../_influx_db_8h.html',1,'']]]
+  ['influxdatav2',['InfluxDataV2',['../class_influx_data_v2.html',1,'InfluxDataV2'],['../class_influx_data_v2.html#a9e68bb9266efec313a2be2d3f2d55682',1,'InfluxDataV2::InfluxDataV2()']]],
+  ['influxdatav2_2eh',['InfluxDataV2.h',['../_influx_data_v2_8h.html',1,'']]],
+  ['influxdbv2',['InfluxdbV2',['../class_influxdb_v2.html',1,'InfluxdbV2'],['../class_influxdb_v2.html#a61a536b9e446ac56fa0d5833aad87e0b',1,'InfluxdbV2::InfluxdbV2()']]],
+  ['influxdbv2_2ecpp',['InfluxDbV2.cpp',['../_influx_db_v2_8cpp.html',1,'']]],
+  ['influxdbv2_2eh',['InfluxDbV2.h',['../_influx_db_v2_8h.html',1,'']]]
 ];

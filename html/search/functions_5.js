@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['write',['write',['../class_influxdb.html#ac24f21cf7fa8e2d54eac81ab1a2cf11d',1,'Influxdb::write()'],['../class_influxdb.html#a2c68d858a4a67b74cde9892bcdb4cabd',1,'Influxdb::write(InfluxData data)'],['../class_influxdb.html#aabc81883ba05cea58553193172f1ac5c',1,'Influxdb::write(String data)']]]
+  ['write',['write',['../class_influxdb_v2.html#a50a9f847f73980ce0f24a9473248947e',1,'InfluxdbV2::write()'],['../class_influxdb_v2.html#a7deae48e7fda68707dbe576fbd4d6850',1,'InfluxdbV2::write(InfluxDataV2 data)'],['../class_influxdb_v2.html#a34812e7230507d021c96cbae6f89ccb8',1,'InfluxdbV2::write(String data)']]]
 ];
